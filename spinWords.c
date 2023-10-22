@@ -10,17 +10,17 @@ int main() {
     uint i=0;
     while(i<strlen(s)) {
         uint j=0;
-        for(;(s[i+j]!=' ')&&(i+j<strlen(s));j++) {
+        while(i+j<strlen(s)) {
+            if(s[i+j]!=' ') j++;
+            else break;        
         }
+        /* Above loop replacement doesn't check outside arr size */
         if(j>4) {
             for(uint l=0;l<j/2;l++) {
                 char temp=s[i+l];
                 s[i+l]=s[i+j-l-1];
                 s[i+j-l-1]=temp;
-                // Why does below bitwise not work here?
-                /* s[i+l]^=s[i+j-l-1];
-                s[i+j-l]^=s[i+l-1];
-                s[i+l]^=s[i+j-l-1]; */
+                // bitwise is not recommended for char
             }
         } i+=j+1;
     }
