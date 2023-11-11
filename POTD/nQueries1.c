@@ -1,3 +1,10 @@
+/* This program takes input N arrays of N elements
+each and an array of N-1 elements. For each
+element value of last array (say i) that ith min
+element gets removed from each array.
+Lastly, the remaining element and its original
+index is printed for each array. */
+
 #include <stdio.h>
 
 int n;
