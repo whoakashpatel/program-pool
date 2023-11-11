@@ -1,3 +1,9 @@
+/* This program takes input an array of size n and
+integer key. If key exists, performs operations
+on either side of the matching element and
+returns a resultant array. If key doesn't exist
+it returns the original array. */
+
 #include <stdio.h>
 
 int main() {
